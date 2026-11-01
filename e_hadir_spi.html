@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Hadir Sektor Pendidikan Islam (SPI)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        turquoise: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            950: '#042f2e'
+                        },
+                        gold: {
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(20, 184, 166, 0.15);
+        }
+        .turquoise-gradient {
+            background: linear-gradient(135deg, #0d9488 0%, #042f2e 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #facc15 0%, #ca8a04 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #fef08a 0%, #eab308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen font-sans flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="turquoise-gradient text-white shadow-xl sticky top-0 z-40 border-b border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center text-turquoise-950 shadow-lg shadow-gold-500/20 font-extrabold text-xl ring-2 ring-gold-300/40">
+                    <i data-feather="check-square" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl tracking-tight text-white leading-tight flex items-center gap-2">
+                        e-Hadir SPI
+                        <span class="text-xs font-semibold px-2 py-0.5 rounded bg-gold-500/20 text-gold-300 border border-gold-400/40">Portal Rasmi</span>
+                    </h1>
+                    <p class="text-xs text-turquoise-200 tracking-wide font-medium">Sektor Pendidikan Islam</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-turquoise-800/60 text-turquoise-100 border border-gold-500/40 shadow-sm backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-gold-400 mr-2 animate-pulse"></span> Sistem Pengesahan Kehadiran
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow">
+        
+        <!-- Hero & Realtime Widget Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Hero Card -->
+            <div class="lg:col-span-2 turquoise-gradient rounded-3xl p-6 sm:p-8 text-white shadow-2xl relative overflow-hidden flex flex-col justify-between border border-turquoise-700/50">
+                <div class="absolute -right-12 -bottom-12 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div>
+                    <span class="px-3.5 py-1 bg-gold-500/20 text-gold-300 text-xs font-bold rounded-full border border-gold-500/40 tracking-wider uppercase inline-flex items-center gap-1.5">
+                        <i data-feather="star" class="w-3.5 h-3.5 text-gold-400"></i> Sistem Kehadiran Eksekutif
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-black mt-4 mb-3 leading-tight tracking-tight">
+                        Selamat Datang ke <span class="gold-text-gradient">e-Hadir SPI</span>
+                    </h2>
+                    <p class="text-turquoise-100 text-sm sm:text-base max-w-xl leading-relaxed">
+                        Pencatatan kehadiran masa nyata & geolokasi presisi untuk Warga Sektor Pendidikan Islam.
+                    </p>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-turquoise-700/60 flex flex-wrap gap-4 text-xs font-semibold text-turquoise-100">
+                    <div class="flex items-center bg-turquoise-900/40 px-3 py-1.5 rounded-xl border border-turquoise-700/40"><i data-feather="shield" class="w-4 h-4 mr-2 text-gold-400"></i> Pengesahan GPS Tepat</div>
+                    <div class="flex items-center bg-turquoise-900/40 px-3 py-1.5 rounded-xl border border-turquoise-700/40"><i data-feather="clock" class="w-4 h-4 mr-2 text-gold-400"></i> Masa Real-Time</div>
+                    <div class="flex items-center bg-turquoise-900/40 px-3 py-1.5 rounded-xl border border-turquoise-700/40"><i data-feather="download" class="w-4 h-4 mr-2 text-gold-400"></i> Eksport Fail CSV Bulanan</div>
+                </div>
+            </div>
+
+            <!-- Jam Digital & Tarikh Realtime Card -->
+            <div class="bg-white rounded-3xl p-6 shadow-xl border border-turquoise-100 flex flex-col justify-between items-center text-center relative overflow-hidden">
+                <div class="w-full">
+                    <div class="inline-flex items-center text-xs font-bold text-turquoise-800 bg-turquoise-50 border border-turquoise-200 px-3.5 py-1.5 rounded-full mb-4">
+                        <i data-feather="calendar" class="w-3.5 h-3.5 mr-1.5 text-gold-600"></i> MASA REAL-TIME
+                    </div>
+                    <!-- Live Clock display -->
+                    <div id="liveClock" class="text-4xl sm:text-5xl font-black tracking-tight text-turquoise-950 my-2 font-mono drop-shadow-sm">00:00:00 AM</div>
+                    <div id="liveDate" class="text-sm font-bold text-slate-500">Memuatkan tarikh...</div>
+                </div>
+
+                <!-- Live Status Indicators -->
+                <div class="w-full mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-center justify-between">
+                    <div class="text-left">
+                        <span class="text-xs text-slate-400 block font-semibold">Status Rangkaian</span>
+                        <span id="networkStatus" class="text-xs font-extrabold text-turquoise-700 flex items-center mt-0.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-turquoise-500 mr-1.5 animate-ping"></span> Dalam Talian
+                        </span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-slate-400 block font-semibold">Zon Masa</span>
+                        <span class="text-xs font-extrabold text-slate-700">MYT (UTC+8)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Form & GPS Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Attendance Form Column (2 Cols wide on desktop) -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-turquoise-100">
+                    <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-100">
+                        <div class="p-3 bg-turquoise-50 text-turquoise-700 rounded-2xl border border-turquoise-200">
+                            <i data-feather="edit-3" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-extrabold text-turquoise-950">Borang Kehadiran Harian</h3>
+                            <p class="text-xs text-slate-500 font-medium">Lengkapkan maklumat dan sahkan keberadaan anda</p>
+                        </div>
+                    </div>
+
+                    <form id="attendanceForm" onsubmit="submitForm(event)" class="space-y-6">
+                        
+                        <!-- Categorization Radio Buttons -->
+                        <div>
+                            <label class="block text-xs font-bold text-turquoise-900 uppercase tracking-wider mb-2">Kategori Warga SPI</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="kategori" value="PEGAWAI" checked onchange="toggleCategory()" class="peer hidden">
+                                    <div class="p-3.5 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-turquoise-600 peer-checked:bg-turquoise-50/60 peer-checked:text-turquoise-900 transition font-bold text-sm flex items-center justify-center space-x-2 shadow-sm">
+                                        <i data-feather="award" class="w-4 h-4 text-gold-600"></i>
+                                        <span>Pegawai SPI</span>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="kategori" value="AKP" onchange="toggleCategory()" class="peer hidden">
+                                    <div class="p-3.5 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-turquoise-600 peer-checked:bg-turquoise-50/60 peer-checked:text-turquoise-900 transition font-bold text-sm flex items-center justify-center space-x-2 shadow-sm">
+                                        <i data-feather="users" class="w-4 h-4 text-gold-600"></i>
+                                        <span>AKP</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Select Nama -->
+                        <div>
+                            <label for="namaSelect" class="block text-xs font-bold text-turquoise-900 uppercase tracking-wider mb-2">Pilih Nama Pegawai / AKP</label>
+                            <div class="relative">
+                                <select id="namaSelect" required class="w-full pl-11 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 appearance-none font-bold text-sm transition shadow-sm">
+                                    <!-- Options populated dynamically JS -->
+                                </select>
+                                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-turquoise-600">
+                                    <i data-feather="user" class="w-5 h-5"></i>
+                                </div>
+                                <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i data-feather="chevron-down" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Custom Name Input for AKP if not listed -->
+                        <div id="akpCustomInputDiv" class="hidden">
+                            <label for="akpCustomInput" class="block text-xs font-bold text-turquoise-900 uppercase tracking-wider mb-2">Nama AKP Baru / Lain-lain (Jika tiada dalam senarai)</label>
+                            <input type="text" id="akpCustomInput" placeholder="Masukkan nama penuh Pn./En. ..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 text-sm font-medium">
+                        </div>
+
+                        <!-- Jenis Kehadiran -->
+                        <div>
+                            <label class="block text-xs font-bold text-turquoise-900 uppercase tracking-wider mb-2">Status Kehadiran</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="jenisKehadiran" value="Hadir Pejabat" checked onchange="toggleKehadiranFields()" class="peer hidden">
+                                    <div class="p-3 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-turquoise-600 peer-checked:bg-turquoise-600 peer-checked:text-white transition font-bold text-xs flex flex-col items-center space-y-1 shadow-sm">
+                                        <i data-feather="briefcase" class="w-4 h-4"></i>
+                                        <span>1. Hadir Pejabat</span>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="jenisKehadiran" value="Tugasan Luar" onchange="toggleKehadiranFields()" class="peer hidden">
+                                    <div class="p-3 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-sky-600 peer-checked:bg-sky-600 peer-checked:text-white transition font-bold text-xs flex flex-col items-center space-y-1 shadow-sm">
+                                        <i data-feather="navigation" class="w-4 h-4"></i>
+                                        <span>2. Tugasan Luar</span>
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="jenisKehadiran" value="Cuti" onchange="toggleKehadiranFields()" class="peer hidden">
+                                    <div class="p-3 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-gold-600 peer-checked:bg-gold-600 peer-checked:text-white transition font-bold text-xs flex flex-col items-center space-y-1 shadow-sm">
+                                        <i data-feather="sun" class="w-4 h-4"></i>
+                                        <span>3. Cuti</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Section: Tugasan Luar -->
+                        <div id="fieldTugasanLuar" class="hidden space-y-4 p-4 bg-sky-50/70 rounded-2xl border border-sky-200">
+                            <h4 class="text-xs font-extrabold text-sky-900 uppercase tracking-wider flex items-center">
+                                <i data-feather="map-pin" class="w-4 h-4 mr-1.5 text-sky-600"></i> Justifikasi Tugasan Luar
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 mb-1">Nama Program / Mesyuarat</label>
+                                    <input type="text" id="tugasanNama" placeholder="Contoh: Bengkel Semakan Kurikulum" class="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 font-medium">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 mb-1">Lokasi Destinasi / Penganjur</label>
+                                    <input type="text" id="tugasanLokasi" placeholder="Contoh: Hotel Royale Chulan / BPK" class="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 font-medium">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Section: Cuti -->
+                        <div id="fieldCuti" class="hidden space-y-4 p-4 bg-amber-50/70 rounded-2xl border border-amber-200">
+                            <h4 class="text-xs font-extrabold text-amber-900 uppercase tracking-wider flex items-center">
+                                <i data-feather="calendar" class="w-4 h-4 mr-1.5 text-gold-600"></i> Justifikasi / Jenis Cuti
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 mb-1">Jenis Cuti</label>
+                                    <select id="jenisCutiSelect" class="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-gold-500 font-medium">
+                                        <option value="Cuti Rehat (CR)">Cuti Rehat (CR)</option>
+                                        <option value="Cuti Sakit (MC)">Cuti Sakit (MC)</option>
+                                        <option value="Cuti Kuarantin / Khas">Cuti Kuarantin / Khas</option>
+                                        <option value="Cuti Tanpa Rekod">Cuti Tanpa Rekod</option>
+                                        <option value="Lain-lain Cuti">Lain-lain Cuti</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-600 mb-1">Tempoh / No. Sijil Sakit (jika ada)</label>
+                                    <input type="text" id="cutiButiran" placeholder="Contoh: 1 Hari / Klinik Kesihatan..." class="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-gold-500 font-medium">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seksyen Pergerakan Lokasi Tambahan -->
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200/90 space-y-3">
+                            <div class="flex items-center justify-between">
+                                <label class="text-xs font-extrabold text-turquoise-950 uppercase tracking-wider flex items-center">
+                                    <i data-feather="compass" class="w-4 h-4 mr-1.5 text-turquoise-600"></i> Lokasi Pergerakan / Justifikasi Keberadaan
+                                </label>
+                                <button type="button" onclick="addPergerakanRow()" class="px-3 py-1.5 text-xs font-bold bg-turquoise-700 hover:bg-turquoise-800 text-white rounded-xl flex items-center space-x-1 transition shadow-sm border border-gold-500/30">
+                                    <i data-feather="plus" class="w-3.5 h-3.5 text-gold-300"></i>
+                                    <span>Tambah Pergerakan</span>
+                                </button>
+                            </div>
+                            <div id="pergerakanContainer" class="space-y-2">
+                                <!-- Dynamic pergerakan rows inserted via JS -->
+                            </div>
+                        </div>
+
+                        <!-- Catatan Tambahan -->
+                        <div>
+                            <label for="catatan" class="block text-xs font-bold text-turquoise-900 uppercase tracking-wider mb-2">Catatan Tambahan (Opsional)</label>
+                            <textarea id="catatan" rows="2" placeholder="Catatan atau maklumat perkhidmatan lain..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-800 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 text-sm font-medium"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full py-4 turquoise-gradient hover:opacity-95 text-white font-extrabold rounded-2xl shadow-xl hover:shadow-turquoise-900/30 transition duration-200 flex items-center justify-center space-x-2 text-base border border-gold-500/40">
+                            <i data-feather="send" class="w-5 h-5 text-gold-300"></i>
+                            <span>Hantar Kehadiran Sekarang</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- GPS Location Card Column -->
+            <div class="space-y-6">
+                <!-- GPS Widget -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-turquoise-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="p-2 bg-turquoise-50 text-turquoise-700 rounded-xl border border-turquoise-200">
+                                    <i data-feather="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-extrabold text-turquoise-950 text-base">Lokasi GPS Anda</h4>
+                            </div>
+                            <span id="gpsBadge" class="px-2.5 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full">Belum Diimbas</span>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-3 mb-4">
+                            <div>
+                                <span class="text-xs text-slate-400 block font-semibold">Latitude</span>
+                                <span id="latDisplay" class="text-sm font-mono font-bold text-turquoise-900">-</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block font-semibold">Longitude</span>
+                                <span id="lngDisplay" class="text-sm font-mono font-bold text-turquoise-900">-</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block font-semibold">Anggaran Ketepatan</span>
+                                <span id="accuracyDisplay" class="text-sm font-bold text-slate-700">-</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4 font-medium">
+                            Koordinat GPS automatik digunakan bagi pengesahan keberadaan rasmi pegawai dan AKP.
+                        </p>
+                    </div>
+
+                    <button type="button" onclick="getLocation()" class="w-full py-3 bg-turquoise-900 hover:bg-turquoise-950 text-white font-bold rounded-2xl text-xs flex items-center justify-center space-x-2 transition border border-gold-500/30">
+                        <i data-feather="refresh-cw" class="w-4 h-4 text-gold-400"></i>
+                        <span>Kemas Kini Lokasi GPS</span>
+                    </button>
+                </div>
+
+                <!-- Info Pengurusan Card -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border border-turquoise-100">
+                    <h4 class="font-extrabold text-turquoise-950 text-base mb-3 flex items-center">
+                        <i data-feather="book" class="w-4 h-4 mr-2 text-gold-600"></i>
+                        Info Pengurusan SPI
+                    </h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                        Sektor Pendidikan Islam komited memastikan rakaman kehadiran warga SPI diproses secara berintegriti, telus, serta mudah dieksport ke dalam rekod bulanan.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Senarai Log Kehadiran Hari Ini & Muat Turun CSV -->
+        <div class="mt-10">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-turquoise-100">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-slate-100 gap-4">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-turquoise-950">Rekod Kehadiran Sesi Ini</h3>
+                        <p class="text-xs text-slate-500 font-medium">Senarai log kemasukan kehadiran pegawai & AKP</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span id="logCount" class="px-3 py-1 bg-turquoise-100 text-turquoise-900 text-xs font-bold rounded-full border border-turquoise-300">0 Rekod</span>
+                        <!-- Download CSV Button -->
+                        <button onclick="downloadCSV()" class="px-4 py-2.5 gold-gradient hover:opacity-90 text-turquoise-950 font-extrabold text-xs rounded-xl shadow-md flex items-center space-x-2 transition border border-gold-300">
+                            <i data-feather="download" class="w-4 h-4"></i>
+                            <span>Muat Turun Fail CSV Bulanan</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-slate-600">
+                        <thead class="bg-turquoise-50 text-turquoise-900 uppercase text-xs font-extrabold border-b border-turquoise-100">
+                            <tr>
+                                <th class="px-4 py-3.5 rounded-l-xl">Masa</th>
+                                <th class="px-4 py-3.5">Nama</th>
+                                <th class="px-4 py-3.5">Kategori</th>
+                                <th class="px-4 py-3.5">Status</th>
+                                <th class="px-4 py-3.5">GPS (Lat, Lng)</th>
+                                <th class="px-4 py-3.5 rounded-r-xl">Justifikasi & Catatan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceLogTable" class="divide-y divide-slate-100">
+                            <tr id="emptyRow">
+                                <td colspan="6" class="px-4 py-6 text-center text-slate-400 italic">Tiada rekod kehadiran dihantar buat masa ini.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-turquoise-100 mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs font-semibold text-slate-500">
+            <p>© <span id="currentYear"></span> e-Hadir Sektor Pendidikan Islam (SPI). Hak Cipta Terpelihara.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-turquoise-950/70 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full mx-4 shadow-2xl text-center transform scale-95 transition-transform duration-300 border border-turquoise-200">
+            <div class="w-16 h-16 bg-turquoise-50 text-turquoise-600 border border-turquoise-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-feather="check-circle" class="w-10 h-10 text-turquoise-600"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-turquoise-950 mb-2">Kehadiran Berjaya Dihantar!</h3>
+            <p class="text-xs text-slate-500 mb-6 font-medium" id="modalMessage">Rekod kehadiran anda telah dimasukkan ke dalam sistem.</p>
+            <button onclick="closeModal()" class="w-full py-3.5 turquoise-gradient hover:opacity-95 text-white font-extrabold rounded-xl text-sm transition border border-gold-500/30">
+                Tutup
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Core Logic -->
+    <script>
+        // Data Senarai Nama Pegawai dan AKP
+        const pegawaiList = [
+            "Ustaz Ishak bin Harun (KPPK)",
+            "Ustaz Yusof bin Yaacob (KPP UPPPI)",
+            "Ustaz Mohamad Faizal bin Najimuddin (KPP ADNI)",
+            "Ustaz Mohammad Nazmi bin Mohsin (PP ADNI)",
+            "Ustaz Mohd Yunus bin Yusof (PP UPPPI)",
+            "Ustazah Rosie Haslinza binti Zainol (PP UPPPI)"
+        ];
+
+        const akpList = [
+            "Pn. Nur Qurratu 'Aini binti Yusoff (PT)",
+            "Pn. Nasriah binti Mohamad Azmi (PT)",
+            "+ Tambah AKP Baru / Lain-lain"
+        ];
+
+        let userLocation = { lat: null, lng: null, accuracy: null };
+        let logs = [];
+        let pergerakanCount = 0;
+
+        // Dynamic Initialization
+        window.onload = function() {
+            feather.replace();
+            updateClock();
+            setInterval(updateClock, 1000);
+            toggleCategory();
+            getLocation();
+            toggleKehadiranFields();
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        };
+
+        // Toggle Fields based on Kehadiran Status
+        function toggleKehadiranFields() {
+            const status = document.querySelector('input[name="jenisKehadiran"]:checked').value;
+            const fieldTugasan = document.getElementById('fieldTugasanLuar');
+            const fieldCuti = document.getElementById('fieldCuti');
+
+            fieldTugasan.classList.add('hidden');
+            fieldCuti.classList.add('hidden');
+
+            if (status === 'Tugasan Luar') {
+                fieldTugasan.classList.remove('hidden');
+            } else if (status === 'Cuti') {
+                fieldCuti.classList.remove('hidden');
+            }
+            feather.replace();
+        }
+
+        // Add dynamic row for pergerakan lokasi / keberadaan
+        function addPergerakanRow(val = '') {
+            pergerakanCount++;
+            const container = document.getElementById('pergerakanContainer');
+            const rowId = `row-pergerakan-${pergerakanCount}`;
+
+            const div = document.createElement('div');
+            div.id = rowId;
+            div.className = 'flex items-center space-x-2 animate-fadeIn';
+            div.innerHTML = `
+                <input type="text" name="pergerakanInput[]" value="${val}" placeholder="Contoh: Pergerakan ke SK Mutiara (Pemantauan)" class="flex-grow px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-turquoise-500 font-medium">
+                <button type="button" onclick="removePergerakanRow('${rowId}')" class="p-2 text-red-500 hover:bg-red-50 rounded-xl transition">
+                    <i data-feather="trash-2" class="w-4 h-4"></i>
+                </button>
+            `;
+            container.appendChild(div);
+            feather.replace();
+        }
+
+        function removePergerakanRow(id) {
+            const el = document.getElementById(id);
+            if (el) el.remove();
+        }
+
+        // Live Real-Time Clock & Date
+        function updateClock() {
+            const now = new Date();
+            
+            // Format Masa
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            const strTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+            
+            // Format Tarikh Melayu
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const strDate = now.toLocaleDateString('ms-MY', options);
+
+            document.getElementById('liveClock').textContent = strTime;
+            document.getElementById('liveDate').textContent = strDate;
+        }
+
+        // Toggle Dynamic Select dropdown options based on category
+        function toggleCategory() {
+            const categorySelect = document.querySelector('input[name="kategori"]:checked').value;
+            const namaSelect = document.getElementById('namaSelect');
+            namaSelect.innerHTML = '';
+
+            let currentList = categorySelect === 'PEGAWAI' ? pegawaiList : akpList;
+
+            currentList.forEach(nama => {
+                const option = document.createElement('option');
+                option.value = nama;
+                option.textContent = nama;
+                namaSelect.appendChild(option);
+            });
+
+            // Handle listener for AKP custom name check
+            namaSelect.onchange = function() {
+                const customDiv = document.getElementById('akpCustomInputDiv');
+                if (this.value.includes('Tambah AKP Baru')) {
+                    customDiv.classList.remove('hidden');
+                } else {
+                    customDiv.classList.add('hidden');
+                }
+            };
+            namaSelect.onchange();
+        }
+
+        // Geolocation Handling
+        function getLocation() {
+            const badge = document.getElementById('gpsBadge');
+            badge.textContent = 'Mengesan...';
+            badge.className = 'px-2.5 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full animate-pulse';
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        userLocation.lat = position.coords.latitude.toFixed(6);
+                        userLocation.lng = position.coords.longitude.toFixed(6);
+                        userLocation.accuracy = position.coords.accuracy.toFixed(1) + ' meter';
+
+                        document.getElementById('latDisplay').textContent = userLocation.lat;
+                        document.getElementById('lngDisplay').textContent = userLocation.lng;
+                        document.getElementById('accuracyDisplay').textContent = userLocation.accuracy;
+
+                        badge.textContent = 'Lokasi Dikesan';
+                        badge.className = 'px-2.5 py-1 bg-turquoise-100 text-turquoise-900 border border-turquoise-300 text-xs font-bold rounded-full';
+                    },
+                    (error) => {
+                        console.warn("GPS Error: ", error.message);
+                        badge.textContent = 'Ralat GPS';
+                        badge.className = 'px-2.5 py-1 bg-red-100 text-red-800 text-xs font-bold rounded-full';
+                        document.getElementById('latDisplay').textContent = 'Tidak diizinkan';
+                        document.getElementById('lngDisplay').textContent = 'Tidak diizinkan';
+                        document.getElementById('accuracyDisplay').textContent = '-';
+                    },
+                    { enableHighAccuracy: true, timeout: 10000 }
+                );
+            } else {
+                badge.textContent = 'Tidak Disokong';
+                badge.className = 'px-2.5 py-1 bg-red-100 text-red-800 text-xs font-bold rounded-full';
+            }
+        }
+
+        // Submit Form Handler
+        function submitForm(event) {
+            event.preventDefault();
+
+            const kategori = document.querySelector('input[name="kategori"]:checked').value;
+            let nama = document.getElementById('namaSelect').value;
+            
+            if (nama.includes('Tambah AKP Baru')) {
+                const customName = document.getElementById('akpCustomInput').value.trim();
+                if (!customName) {
+                    alert('Sila masukkan nama AKP baharu.');
+                    return;
+                }
+                nama = customName;
+            }
+
+            const jenisKehadiran = document.querySelector('input[name="jenisKehadiran"]:checked').value;
+            
+            // Build Justifikasi text
+            let justifikasiDetails = [];
+            if (jenisKehadiran === 'Tugasan Luar') {
+                const prog = document.getElementById('tugasanNama').value.trim();
+                const lok = document.getElementById('tugasanLokasi').value.trim();
+                if (prog || lok) justifikasiDetails.push(`Program: ${prog || '-'} | Destinasi: ${lok || '-'}`);
+            } else if (jenisKehadiran === 'Cuti') {
+                const jCuti = document.getElementById('jenisCutiSelect').value;
+                const bCuti = document.getElementById('cutiButiran').value.trim();
+                justifikasiDetails.push(`Jenis: ${jCuti} ${bCuti ? '(' + bCuti + ')' : ''}`);
+            }
+
+            // Gather Pergerakan inputs
+            const pergerakanInputs = document.querySelectorAll('input[name="pergerakanInput[]"]');
+            let pergerakanList = [];
+            pergerakanInputs.forEach(inp => {
+                if (inp.value.trim()) pergerakanList.push(inp.value.trim());
+            });
+
+            if (pergerakanList.length > 0) {
+                justifikasiDetails.push(`Pergerakan: ${pergerakanList.join('; ')}`);
+            }
+
+            const catatanNota = document.getElementById('catatan').value.trim();
+            if (catatanNota) justifikasiDetails.push(`Nota: ${catatanNota}`);
+
+            const finalCatatan = justifikasiDetails.length > 0 ? justifikasiDetails.join(' • ') : '-';
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('ms-MY');
+            const timeFormatted = now.toLocaleTimeString('ms-MY', { hour: '2-digit', minute: '2-digit' });
+
+            const gpsStr = userLocation.lat ? `${userLocation.lat}, ${userLocation.lng}` : 'Tiada GPS';
+
+            // Add Record to Local Table Array
+            const record = {
+                tarikh: dateStr,
+                masa: timeFormatted,
+                nama: nama,
+                kategori: kategori,
+                jenis: jenisKehadiran,
+                gps: gpsStr,
+                catatan: finalCatatan
+            };
+
+            logs.unshift(record);
+            renderLogs();
+
+            // Show Success Modal
+            const modal = document.getElementById('successModal');
+            document.getElementById('modalMessage').textContent = `Kehadiran bagi ${nama} (${jenisKehadiran}) pada ${timeFormatted} berjaya direkodkan.`;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+
+            // Reset dynamic inputs
+            document.getElementById('catatan').value = '';
+            document.getElementById('tugasanNama').value = '';
+            document.getElementById('tugasanLokasi').value = '';
+            document.getElementById('cutiButiran').value = '';
+            document.getElementById('pergerakanContainer').innerHTML = '';
+        }
+
+        // Render Logs to Table
+        function renderLogs() {
+            const tbody = document.getElementById('attendanceLogTable');
+            const emptyRow = document.getElementById('emptyRow');
+            const logCount = document.getElementById('logCount');
+
+            logCount.textContent = `${logs.length} Rekod`;
+
+            if (logs.length > 0 && emptyRow) {
+                tbody.innerHTML = '';
+            }
+
+            logs.forEach(log => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50 transition font-medium';
+
+                let jenisBadge = '';
+                if(log.jenis === 'Hadir Pejabat') jenisBadge = '<span class="px-2.5 py-1 text-xs font-bold bg-turquoise-100 text-turquoise-900 border border-turquoise-300 rounded-lg">Hadir Pejabat</span>';
+                else if(log.jenis === 'Tugasan Luar') jenisBadge = '<span class="px-2.5 py-1 text-xs font-bold bg-sky-100 text-sky-900 border border-sky-300 rounded-lg">Tugasan Luar</span>';
+                else jenisBadge = '<span class="px-2.5 py-1 text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 rounded-lg">Cuti</span>';
+
+                tr.innerHTML = `
+                    <td class="px-4 py-3 font-mono text-xs text-slate-700 font-bold">${log.masa}</td>
+                    <td class="px-4 py-3 font-bold text-turquoise-950">${log.nama}</td>
+                    <td class="px-4 py-3 text-xs"><span class="px-2 py-0.5 bg-slate-100 rounded-md text-slate-700 font-bold border border-slate-200">${log.kategori}</span></td>
+                    <td class="px-4 py-3">${jenisBadge}</td>
+                    <td class="px-4 py-3 font-mono text-xs text-slate-500">${log.gps}</td>
+                    <td class="px-4 py-3 text-xs text-slate-600">${log.catatan}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Function to Download Data into CSV File
+        function downloadCSV() {
+            if (logs.length === 0) {
+                alert('Tiada rekod kehadiran untuk dieksport lagi. Sila hantar borang kehadiran terlebih dahulu.');
+                return;
+            }
+
+            // CSV Header
+            let csvContent = "\uFEFF"; // UTF-8 BOM for Excel Malay character compatibility
+            csvContent += "Tarikh,Masa,Nama,Kategori,Status Kehadiran,GPS (Lat Lng),Justifikasi & Catatan\n";
+
+            // Add rows
+            logs.forEach(log => {
+                const escapeCsv = (text) => `"${(text || '').replace(/"/g, '""')}"`;
+                const row = [
+                    escapeCsv(log.tarikh),
+                    escapeCsv(log.masa),
+                    escapeCsv(log.nama),
+                    escapeCsv(log.kategori),
+                    escapeCsv(log.jenis),
+                    escapeCsv(log.gps),
+                    escapeCsv(log.catatan)
+                ].join(",");
+                csvContent += row + "\n";
+            });
+
+            // Create Download Link
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            
+            const now = new Date();
+            const monthYear = now.toLocaleDateString('ms-MY', { month: '2-digit', year: 'numeric' }).replace('/', '-');
+            
+            link.setAttribute('href', url);
+            link.setAttribute('download', `e-Hadir_SPI_Rekod_${monthYear}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Modal Close
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
